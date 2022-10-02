@@ -1,0 +1,13 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: booking
+  - action: utter_test
+
+
+
