@@ -34,4 +34,5 @@ nlu:
 - intent: which_room_type
   examples: |
     - i would like to book a [single]{"entity":"name2","value":"single"} room
-    
+    - i would like to book a [triple]{"entity":"name2","value":"triple"} room
+    - i would like to book a [double]{"entity":"name2","value":"double"} room
