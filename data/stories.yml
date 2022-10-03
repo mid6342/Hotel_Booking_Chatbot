@@ -9,9 +9,9 @@ stories:
   - intent: booking
   - action: utter_test
   - intent: gives_name
-  - action: utter_room_type
-  - intent: room_type
-  - action: utter_room_booked
+  - action: utter_roomType
+  - intent: which_room_type
+  - action: utter_roomBooked
 
 
 
