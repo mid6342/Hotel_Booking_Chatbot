@@ -3,6 +3,29 @@ version: "3.1"
 intents:
   - greet
   - booking
+  - gives_name:
+      use_entities: 
+        - name
+  - which_room_type:
+      use_entities:
+        - name2
+
+
+entities:
+  - name
+  - room_type
+
+slots:
+  name:
+    type: any
+    mappings:
+         - type: from_entity
+           entity: name
+  name2:
+    type: any
+    mappings:
+         - type: from_entity
+           entity: name2
 
 
 
@@ -11,9 +34,14 @@ responses:
   - text: "Hey! I'm HotelBot, do you want to book a room?"
 
   utter_test:
-  - text: "test"
+  - text: "Nice, can you please tell me your name and surname?"
+  - text: "Ok perfect! what is your name and surname?"
 
+  utter_room_type:
+  - text: "what type of room would you like to book, single double or triple?" #Thank you, {name}, 
 
+  utter_room_booked:
+  - text: "Nice, i have booked {name2} for you!"
 
 session_config:
   session_expiration_time: 60

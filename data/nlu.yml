@@ -15,10 +15,23 @@ nlu:
     - hey dude
     - goodmorning
     - goodevening
-    - good afternoon
+    - goodafternoon
 
 - intent: booking
   examples: |
     - yes
     - yes!
     - lets do it
+
+- intent: gives_name
+  examples: |
+    - My name is [Michael]{"entity":"name","value":"Michael"}
+    - My name is [Tristan]{"entity":"name","value":"Tristan"}
+    - My name is [Apa]{"entity":"name","value":"Apa"}
+    - [Michael]{"entity":"name","value":"Michael"} is my name
+    - People call me [Michael]{"entity":"name","value":"Michael"}
+
+- intent: which_room_type
+  examples: |
+    - i would like to book a [single]{"entity":"name2","value":"single"} room
+    

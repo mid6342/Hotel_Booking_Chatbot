@@ -8,6 +8,10 @@ stories:
   - action: utter_greet
   - intent: booking
   - action: utter_test
+  - intent: gives_name
+  - action: utter_room_type
+  - intent: room_type
+  - action: utter_room_booked
 
 
 
