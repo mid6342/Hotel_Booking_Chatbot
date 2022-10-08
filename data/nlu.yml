@@ -17,7 +17,7 @@ nlu:
     - goodevening
     - goodafternoon
 
-- intent: booking
+- intent: affirm
   examples: |
     - yes
     - yes!
@@ -36,3 +36,7 @@ nlu:
     - i would like to book a [single]{"entity":"name2","value":"single"} room
     - i would like to book a [triple]{"entity":"name2","value":"triple"} room
     - i would like to book a [double]{"entity":"name2","value":"double"} room
+
+- intent: gives_date
+  examples: |
+    - My name is [Monday]{"entity":"CheckinDate","value":"Monday"}

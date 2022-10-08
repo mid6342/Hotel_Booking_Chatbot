@@ -6,10 +6,12 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: booking
+  - intent: affirm
   - action: utter_test
   - intent: gives_name
   - action: utter_roomType
+  - intent: gives_date
+  - action: utter_roomSize
   - intent: which_room_type
   - action: utter_roomBooked
 

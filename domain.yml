@@ -2,18 +2,22 @@ version: "3.1"
 
 intents:
   - greet
-  - booking
+  - affirm
   - gives_name:
       use_entities: 
         - name
   - which_room_type:
       use_entities:
         - name2
+  - gives_date:
+      use_entities:
+        - CheckinDate
 
 
 entities:
   - name
   - name2
+  - CheckinDate
 
 slots:
   name:
@@ -26,6 +30,11 @@ slots:
     mappings:
          - type: from_entity
            entity: name2
+  CheckinDate:
+    type: any
+    mappings:
+         - type: from_entity
+           entity: CheckinDate
 
 
 
@@ -38,10 +47,13 @@ responses:
   - text: "Ok perfect! what is your name and surname?"
 
   utter_roomType:
-  - text: "Thank you, {name}, what type of room would you like to book, single double or triple?" 
+  - text: "Thank you, {name}, what day of the week do you want to check in and what day do you want to check out?"
+
+  utter_roomSize:
+  - text: "What type of room would you like to book, single double or triple" 
 
   utter_roomBooked:
-  - text: "Nice, i have booked {name2} for you!"
+  - text: "Nice, i have booked {name2} sized room on {CheckinDate} for you!"
 
 session_config:
   session_expiration_time: 60
