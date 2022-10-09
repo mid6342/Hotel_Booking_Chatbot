@@ -29,6 +29,14 @@ nlu:
     - please
     - yeah
 
+- intent: deny
+  examples: |
+    - no
+    - nah
+    - no, everything alright
+    - no furhter questions
+
+
 - intent: gives_name
   examples: |
     - My name is [Michael]{"entity":"name","value":"Michael"}
@@ -54,7 +62,7 @@ nlu:
 - intent: gives_date
   examples: |
     - I would like to book on [Monday]{"entity":"CheckinDate","value":"Monday"}
-    - I would like to book on [Tuiesday]{"entity":"CheckinDate","value":"Monday"}
-    - I would like to book on [Friday]{"entity":"CheckinDate","value":"Monday"}
-    - I would like to book on [Saturday]{"entity":"CheckinDate","value":"Monday"}
-    - I would like to book on [Wednesday]{"entity":"CheckinDate","value":"Monday"}
+    - I would like to book on [Tuesday]{"entity":"CheckinDate","value":"Tuesday"}
+    - I would like to book on [Friday]{"entity":"CheckinDate","value":"Friday"}
+    - I would like to book on [Saturday]{"entity":"CheckinDate","value":"Saturday"}
+    - I would like to book on [Wednesday]{"entity":"CheckinDate","value":"Wednesday"}

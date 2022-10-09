@@ -13,6 +13,9 @@ stories:
   - intent: gives_date
   - action: utter_roomSize
   - intent: which_room_type
+  - action: utter_questions
+  # hier meherere intents, die möglich sind
+  - intent: deny
   - action: utter_roomBooked
 
 

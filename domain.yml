@@ -3,6 +3,7 @@ version: "3.1"
 intents:
   - greet
   - affirm
+  - deny
   - gives_name:
       use_entities: 
         - name
@@ -43,14 +44,16 @@ responses:
   - text: "Hey! I'm HotelBot, do you want to book a room?"
 
   utter_test:
-  - text: "Nice, can you please tell me your name and surname?"
-  - text: "Ok perfect! what is your name and surname?"
+  - text: "Nice, our hotel includes breakfast and dinner for each reservation, also there is the option to set your cleaning time as you wish! Can you please tell me your name and surname?"
 
   utter_roomType:
   - text: "Thank you, {name}, what day of the week do you want to check in and what day do you want to check out?"
 
   utter_roomSize:
   - text: "What type of room would you like to book, single double or triple" 
+
+  utter_questions:
+  - text: "Perfect, thank you for the information! Do you still have any questions?"
 
   utter_roomBooked:
   - text: "Nice, i have booked {name2} sized room on {CheckinDate} for you!"
