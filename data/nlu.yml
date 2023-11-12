@@ -3,66 +3,82 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
     - hi
-    - hello there
+    - hello
+    - hey
     - good morning
     - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - goodafternoon
+    - hi there
+    - greetings
+    - hello there
+    - good day
+    - good afternoon
+
+- intent: provide_dates
+  examples: |
+    - I want to book from [2023-11-05](time) to [2023-11-10](time)
+    - Check-in on [2023-11-05](time) and check-out on [2023-11-10](time)
+    - Booking dates are [2023-11-05](time) until [2023-11-10](time)
+    - Can I get a room from [2023-11-05](time) to [2023-11-10](time)?
+    - I'd like to reserve from [2023-11-05](time) to [2023-11-10](time)
+    - My stay is from [2023-11-05](time) until [2023-11-10](time)
+    - I need a booking from [2023-11-05](time) to [2023-11-10](time)
+    - Reserve from [2023-11-05](time) to [2023-11-10](time) please
+
+- intent: provide_number_of_guests
+  examples: |
+    - It will be for [2](number_of_guests) guests
+    - We are [2](number_of_guests) guests
+    - Booking for [3](number_of_guests) guests please
+    - Accommodate [3](number_of_guests) visitors
+    - I need a room for [1](number_of_guests) person
+    - Reservation for [2](number_of_guests) please
+    - A table for [3](number_of_guests)
+    - There will be [2](number_of_guests) of us
+    - Can I book a room for [3](number_of_guests)?
+    - We will be [2](number_of_guests) staying
 
 - intent: affirm
   examples: |
     - yes
-    - yes!
-    - lets do it
+    - yeah
     - ok
     - sure
+    - definitely
+    - absolutely
     - of course
-    - yes, please
-    - please
-    - yeah
+    - that's right
+    - indeed
 
-- intent: deny
+- intent: provide_surname
   examples: |
-    - no
-    - nah
-    - no, everything alright
-    - no furhter questions
+    - My surname is [Smith](surname)
+    - It's [Johnson](surname)
+    - [Doe](surname)
+    - Surname [Brown](surname)
+    - Last name is [Davis](surname)
+    - [Miller](surname) is my last name
+    - The family name's [Wilson](surname)
+    - I go by [Taylor](surname)
 
-
-- intent: gives_name
+- intent: question_breakfast_time
   examples: |
-    - My name is [Michael]{"entity":"name","value":"Michael"}
-    - My name is [Tristan]{"entity":"name","value":"Tristan"}
-    - My name is [Apa]{"entity":"name","value":"Apa"}
-    - [Michael]{"entity":"name","value":"Michael"} is my name
-    - People call me [Michael]{"entity":"name","value":"Michael"}
-    - I am [Michael]{"entity":"name","value":"Michael"}
-    - I am [Laura]{"entity":"name","value":"Michael"}
-    - I am [Pete]{"entity":"name","value":"Michael"}
+    - What time is breakfast served?
+    - Can you tell me the breakfast hours?
+    - When can I have breakfast?
+    - What are the breakfast timings?
+    - Until what time is breakfast available?
+    - I'd like to know the breakfast schedule.
+    - Could you inform me about the time for breakfast?
+    - Breakfast is served at what time?
 
-- intent: which_room_type
+- intent: question_pet
   examples: |
-    - i would like to book a [single]{"entity":"name2","value":"single"} room
-    - i would like to book a [triple]{"entity":"name2","value":"triple"} room
-    - i would like to book a [double]{"entity":"name2","value":"double"} room
-    - [double]{"entity":"name2","value":"double"} room
-    - please a [double]{"entity":"name2","value":"double"} room
-    - booking [double]{"entity":"name2","value":"double"} room
-    - [double]{"entity":"name2","value":"double"} room it is
-    - ok, nice then please a [double]{"entity":"name2","value":"double"} room
-
-- intent: gives_date
-  examples: |
-    - I would like to book on [Monday]{"entity":"CheckinDate","value":"Monday"}
-    - I would like to book on [Tuesday]{"entity":"CheckinDate","value":"Tuesday"}
-    - I would like to book on [Friday]{"entity":"CheckinDate","value":"Friday"}
-    - I would like to book on [Saturday]{"entity":"CheckinDate","value":"Saturday"}
-    - I would like to book on [Wednesday]{"entity":"CheckinDate","value":"Wednesday"}
+    - Are pets allowed in the hotel?
+    - Can I bring my cat with me?
+    - Do you have any rooms that are pet-friendly?
+    - Is there an extra charge for bringing a pet?
+    - What is your hotel's policy on pets?
+    - Are there any restrictions on the type of pets allowed?
+    - Do you offer any pet services like pet sitting?
+    - Can pets be left in the room unattended?

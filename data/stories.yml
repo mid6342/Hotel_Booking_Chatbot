@@ -1,22 +1,21 @@
 version: "3.1"
 
 stories:
-
-- story: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_test
-  - intent: gives_name
-  - action: utter_roomType
-  - intent: gives_date
-  - action: utter_roomSize
-  - intent: which_room_type
-  - action: utter_questions
-  # hier meherere intents, die möglich sind
-  - intent: deny
-  - action: utter_roomBooked
-
-
+  - story: Successful booking with dates and number of guests provided
+    steps:
+      - intent: greet
+      - action: utter_ask_name
+      - intent: provide_surname
+      - action: utter_ask_date #action_receive_surname
+      - intent: provide_dates
+      - action: action_save_dates
+      - intent: provide_number_of_guests
+      - action: action_check_availability_and_save_details
+      - intent: affirm
+      - action: utter_confirm
+      - intent: question_breakfast_time
+      - action: utter_breakfast_time
+      - intent: question_pet
+      - action: utter_pet
+      
 

@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+  - rule: Ask for surname after greeting
+    steps:
+      - intent: greet
+      - action: utter_ask_name   
+
+  - rule: Ask for dates after surname is provided
+    steps:
+      - intent: provide_surname
+      - action: utter_ask_date 
+
+  - rule: Ask for number of guests after dates are provided
+    steps:
+      - intent: provide_dates
+      - action: action_save_dates
+
+  - rule: Confirm booking after all information is provided
+    steps:
+      - intent: provide_number_of_guests
+      - action: action_check_availability_and_save_details
+
+  - rule: Confirm booking end
+    steps:
+      - action: action_check_availability_and_save_details
+      - intent: affirm
+      - action: utter_confirm
+
+  - rule: Breakfast question
+    steps:
+      - intent: question_breakfast_time
+      - action: utter_breakfast_time
+  
+  - rule: Pet question
+    steps:
+      - intent: question_pet
+      - action: utter_pet
+
+
+
+
+

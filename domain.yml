@@ -2,61 +2,67 @@ version: "3.1"
 
 intents:
   - greet
+  - provide_dates
+  - provide_number_of_guests 
   - affirm
-  - deny
-  - gives_name:
-      use_entities: 
-        - name
-  - which_room_type:
-      use_entities:
-        - name2
-  - gives_date:
-      use_entities:
-        - CheckinDate
-
+  - utter_ask_name
+  - provide_surname
+  - utter_confirm
+  - utter_ask_date
+  - question_breakfast_time
+  - utter_breakfast_time
+  - question_pet
+  - utter_pet
 
 entities:
-  - name
-  - name2
-  - CheckinDate
+  - time
+  - check_in_date
+  - check_out_date
+  - number_of_guests  
+  - number
+  - surname
 
 slots:
-  name:
-    type: any
+  surname:
+    type: text
     mappings:
-         - type: from_entity
-           entity: name
-  name2:
-    type: any
+      - type: from_entity
+        entity: surname
+  check_in_date:
+    type: text
+    influence_conversation: false
     mappings:
-         - type: from_entity
-           entity: name2
-  CheckinDate:
-    type: any
+      - type: from_entity
+        entity: time
+  check_out_date:
+    type: text
+    influence_conversation: false
     mappings:
-         - type: from_entity
-           entity: CheckinDate
+      - type: from_entity
+        entity: time
+  number_of_guests:  
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: number
 
-
+actions:
+  - action_save_dates
+  - action_check_availability_and_save_details
+  - action_receive_surname
 
 responses:
-  utter_greet:
-  - text: "Hey! I'm HotelBot, do you want to book a room?"
-
-  utter_test:
-  - text: "Nice, our hotel includes breakfast and dinner for each reservation, also there is the option to set your cleaning time as you wish! Can you please tell me your name and surname?"
-
-  utter_roomType:
-  - text: "Thank you, {name}, what day of the week do you want to check in and what day do you want to check out?"
-
-  utter_roomSize:
-  - text: "What type of room would you like to book, single double or triple" 
-
-  utter_questions:
-  - text: "Perfect, thank you for the information! Do you still have any questions?"
-
-  utter_roomBooked:
-  - text: "Nice, i have booked {name2} sized room on {CheckinDate} for you!"
+  utter_ask_name:
+    - text: "Hello, I am the Imaginary Hotel Chatbot. If you want to book a room, please first provide your surname to proceed."
+  utter_confirm:
+    - text: "I have secured your booking, Thank you for choosing Imaginary Hotel. You can now exit the chat or ask additional questions"
+  utter_ask_date:
+    - text: "Hello, Mr/Ms {surname}, please provide your check-in and check-out date in the format yyyy-mm-dd to proceed with the booking."
+  utter_breakfast_time:
+    - text: "Breakfast will be served from 7 am until 9 am"
+  utter_pet:
+    - text: "We are happy to accommodate your furry friends at our hotel! Pets are welcome in our Hotel. We allow up to two pets per room, and we kindly ask that they are supervised at all times during your stay."
 
 session_config:
   session_expiration_time: 60
