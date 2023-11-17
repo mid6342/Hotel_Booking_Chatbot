@@ -37,6 +37,15 @@ rules:
       - intent: question_pet
       - action: utter_pet
 
+  - rule: Pool question
+    steps:
+      - intent: question_pool
+      - action: utter_pool
+
+  - rule: Spa question
+    steps:
+      - intent: question_spa
+      - action: utter_spa
 
 
 

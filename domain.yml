@@ -13,7 +13,10 @@ intents:
   - utter_breakfast_time
   - question_pet
   - utter_pet
-
+  - utter_pool
+  - utter_spa
+  - question_pool
+  - question_spa
 entities:
   - time
   - check_in_date
@@ -63,6 +66,10 @@ responses:
     - text: "Breakfast will be served from 7 am until 9 am"
   utter_pet:
     - text: "We are happy to accommodate your furry friends at our hotel! Pets are welcome in our Hotel. We allow up to two pets per room, and we kindly ask that they are supervised at all times during your stay."
+  utter_pool:
+    - text: "Our hotel features a wonderful swimming pool for our guests to enjoy! The pool is open daily from 7:00 AM to 10:00 PM. We offer amenities like pool towels and comfortable loungers. Please note that while there's no need to book in advance, we do have certain guidelines to ensure everyone's safety and enjoyment, including age restrictions for unaccompanied minors and accessibility options for guests with disabilities."
+  utter_spa:
+    - text: "We take pride in our on-site spa, offering a tranquil retreat for our guests. Our spa provides a variety of treatments, from massages to facials, available for booking. Operating hours are from 9:00 AM to 8:00 PM. While our spa services are not included in the standard room rate, we often have special packages and deals. We strive to make our spa accessible and enjoyable for all our guests, including those with disabilities. We recommend booking in advance to secure your preferred time."
 
 session_config:
   session_expiration_time: 60

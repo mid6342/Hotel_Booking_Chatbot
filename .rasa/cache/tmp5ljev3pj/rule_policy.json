@@ -1,0 +1,38 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_number_of_guests\"}}]": "action_check_availability_and_save_details",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_number_of_guests\"}}, {\"prev_action\": {\"action_name\": \"action_check_availability_and_save_details\"}, \"user\": {\"intent\": \"provide_number_of_guests\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_breakfast_time\"}}]": "utter_breakfast_time",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_breakfast_time\"}}, {\"prev_action\": {\"action_name\": \"utter_breakfast_time\"}, \"user\": {\"intent\": \"question_breakfast_time\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_dates\"}}]": "action_save_dates",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_dates\"}}, {\"prev_action\": {\"action_name\": \"action_save_dates\"}, \"user\": {\"intent\": \"provide_dates\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_check_availability_and_save_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_check_availability_and_save_details\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]": "utter_confirm",
+      "[{\"prev_action\": {\"action_name\": \"action_check_availability_and_save_details\"}}, {\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}, {\"prev_action\": {\"action_name\": \"utter_confirm\"}, \"user\": {\"intent\": \"affirm\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_surname\"}}]": "utter_ask_date",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"provide_surname\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_date\"}, \"user\": {\"intent\": \"provide_surname\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_spa\"}}]": "utter_spa",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_spa\"}}, {\"prev_action\": {\"action_name\": \"utter_spa\"}, \"user\": {\"intent\": \"question_spa\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pool\"}}]": "utter_pool",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pool\"}}, {\"prev_action\": {\"action_name\": \"utter_pool\"}, \"user\": {\"intent\": \"question_pool\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_ask_name",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_name\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pet\"}}]": "utter_pet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pet\"}}, {\"prev_action\": {\"action_name\": \"utter_pet\"}, \"user\": {\"intent\": \"question_pet\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_spa\"}}, {\"prev_action\": {\"action_name\": \"utter_spa\"}, \"user\": {\"intent\": \"question_spa\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_spa\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_check_availability_and_save_details\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pool\"}}, {\"prev_action\": {\"action_name\": \"utter_pool\"}, \"user\": {\"intent\": \"question_pool\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"question_pool\"}}]",
+      "predicting default action with intent restart",
+      "predicting default action with intent back"
+    ]
+  }
+}

@@ -60,6 +60,27 @@ nlu:
     - [Miller](surname) is my last name
     - The family name's [Wilson](surname)
     - I go by [Taylor](surname)
+    - My surname is [Williams](surname)
+    - It's [Anderson](surname)
+    - [Thomas](surname)
+    - Surname [Jackson](surname)
+    - Last name is [White](surname)
+    - [Harris](surname) is my last name
+    - The family name's [Martin](surname)
+    - I go by [Thompson](surname)
+    - Surname on the reservation is [Garcia](surname)
+    - My last name is [Martinez](surname)
+    - The booking is under [Robinson](surname)
+    - I have the surname [Clark](surname)
+    - [Rodriguez](surname) is the name
+    - It's [Lewis](surname) for the reservation
+    - [Lee](surname), that's my surname
+    - Booking under [Walker](surname)
+    - The name's [Hall](surname)
+    - Reservation is under [Allen](surname)
+    - [Young](surname) is the family name
+    - I'm listed as [Hernandez](surname)
+
 
 - intent: question_breakfast_time
   examples: |
@@ -82,3 +103,36 @@ nlu:
     - Are there any restrictions on the type of pets allowed?
     - Do you offer any pet services like pet sitting?
     - Can pets be left in the room unattended?
+    - What are the requirements for bringing a pet to your hotel?
+    - Are there any specific rooms allocated for guests with pets?
+    - Do you provide any amenities for pets, like beds or food bowls?
+    - How many pets can I bring with me during my stay?
+    - Do you charge a deposit for guests with pets?
+    - Can I leave my pet in the hotel room while I am out?
+
+- intent: question_pool
+  examples: |
+    - Is there a swimming pool in the hotel?
+    - What are the opening hours of the pool?
+    - Do I need to book a time slot to use the pool?
+    - Are there any age restrictions for using the pool?
+    - Is the pool heated?
+    - Are pool towels provided by the hotel?
+    - Is there a lifeguard on duty at the pool?
+    - Can guests use the pool free of charge?
+    - Are there any poolside services or amenities?
+    - Is the pool accessible for people with disabilities?
+
+- intent: question_spa
+  examples: |
+    - Does the hotel have a spa?
+    - What types of treatments are available at the spa?
+    - Do I need to make a reservation for spa services?
+    - Are the spa facilities included in the room rate?
+    - What are the opening hours of the spa?
+    - Are there any age restrictions for using the spa?
+    - Can non-hotel guests book spa treatments?
+    - Do you offer any spa packages or special deals?
+    - Are there any health and wellness programs available at the spa?
+    - Is the spa accessible for people with disabilities?
+

@@ -71,7 +71,7 @@ class ActionCheckAvailabilityAndSaveDetails(Action):
             try:
                 number_of_guests = int(number_of_guests)
             except ValueError:
-                dispatcher.utter_message(text="Please tell me how many guests there will be using a number.")
+                dispatcher.utter_message(text="Please tell me how many guests there will be using a number like 1, 2, 3.")
                 return []
         else:
             dispatcher.utter_message(text="Please tell me the number of guests.")

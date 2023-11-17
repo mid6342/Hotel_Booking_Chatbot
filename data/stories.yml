@@ -17,5 +17,8 @@ stories:
       - action: utter_breakfast_time
       - intent: question_pet
       - action: utter_pet
-      
+      - intent: question_pool
+      - action: utter_pool
+      - intent: question_spa
+      - action: utter_spa
 
